@@ -45,7 +45,7 @@ class Cart extends React.Component<ICartProps> {
             </li>
           ))}
         </ul>
-        <div className="cart_item">
+        <div className="cart_item attribute">
           <p>Total: {this.getTotal()}</p>
         </div>
       </div>

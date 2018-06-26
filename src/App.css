@@ -41,3 +41,14 @@
 .navigation-img:hover {
   background-color: #e1e1e1;
 }
+.desc {
+  float: left;
+}
+
+.attribute {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}

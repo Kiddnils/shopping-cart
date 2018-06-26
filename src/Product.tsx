@@ -42,7 +42,7 @@ export class Product extends React.Component<IProductProps, IProductState> {
           <p className="desc">Description:</p>
           <p className="attribute"> {this.props.product.description}</p>
           <div className="clear" />
-          <p className="desc">Stock:</p>
+          <p className="desc">In Stock:</p>
           <p className="attribute"> {this.props.product.count}</p>
           <div className="clear" />
           <p className="desc">Price:</p>
@@ -57,7 +57,7 @@ export class Product extends React.Component<IProductProps, IProductState> {
             value={this.state.amount}
           />
           <button className="square" onClick={this.onClickLocal}>
-            Add to cart.
+            Add to cart
           </button>
         </div>
       </div>

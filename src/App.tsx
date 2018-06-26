@@ -70,9 +70,17 @@ class App extends React.Component<{}, IAppState> {
     cartTemp[st] = {
       count: oldValue + amount
     };
+    // if count in cart is larger than existing inventory set count to max inventory
+    if (cartTemp[st].count > this.state.products[st].count) {
+      cartTemp[st] = {
+        count: this.state.products[st].count
+      };
+    }
+    // if count is zero, remove from cart list
     if (cartTemp[st].count === 0) {
       delete cartTemp[st];
     }
+
     this.setState({ cart: cartTemp });
   };
 
