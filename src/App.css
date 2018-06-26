@@ -1,28 +1,43 @@
 .App {
   text-align: center;
+  margin-top: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Cart {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-title {
-  font-size: 1.5em;
+.logo {
+  color: #fefefe;
+  font-size: 43.2px;
+  font-weight: bold;
+  padding-left: 15%;
+  text-align: left;
+  background-color: #12709e;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.App-intro {
-  font-size: large;
+.navigation {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+  padding-left: 15%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.navigation div {
+  float: left;
+  overflow: hidden;
+}
+
+.navigation-img {
+  transition: all 0.3s ease;
+}
+
+.navigation-img:hover {
+  background-color: #e1e1e1;
 }

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Product } from "./Product";
 import { IProduct } from "./Product";
+import "./Shop.css";
 
 export interface IShop {
   products: {

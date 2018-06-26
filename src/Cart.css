@@ -1,0 +1,10 @@
+.cart_item {
+  overflow: hidden;
+  margin: 15px;
+  list-style: none;
+  padding: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.cart_img {
+  float: left;
+}

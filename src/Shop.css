@@ -1,0 +1,29 @@
+.product-list {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 0;
+}
+
+.product-list_item {
+  float: left;
+  max-width: 400px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 15px;
+  list-style: none;
+  padding: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.desc {
+  float: left;
+}
+
+.attribute {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
