@@ -11,6 +11,9 @@ export interface IApp {
 }
 
 export interface IAppState {
+  cart: {
+    [id: string]: { count: number };
+  };
   products: {
     [id: string]: IProduct;
   };
@@ -20,6 +23,7 @@ class App extends React.Component<{}, IAppState> {
   constructor(props: IApp) {
     super(props);
     this.state = {
+      cart: {},
       products: {
         "1": {
           count: 2,
@@ -39,12 +43,24 @@ class App extends React.Component<{}, IAppState> {
     };
   }
 
+  public handleClick = (st: string, amount: number) => {
+    const cartTemp = { ...this.state.cart };
+    cartTemp[st] = {
+      count: amount
+    };
+    this.setState({ cart: cartTemp });
+  };
+
   public render() {
     return (
       <div>
         <Header />
-        <Shop products={this.state.products} />
-        <Cart />
+        <Shop products={this.state.products} onItemClick={this.handleClick} />
+        <Cart
+          cart={this.state.cart}
+          products={this.state.products}
+          onItemClick={this.handleClick}
+        />
       </div>
     );
   }

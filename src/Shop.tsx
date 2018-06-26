@@ -6,6 +6,7 @@ export interface IShop {
   products: {
     [id: string]: IProduct;
   };
+  onItemClick(st: string, amount: number): void;
 }
 
 class Shop extends React.Component<IShop> {
@@ -15,7 +16,11 @@ class Shop extends React.Component<IShop> {
         <ul className="product-list">
           {Object.keys(this.props.products).map(product => (
             <li key={product} className="product-list_item">
-              <Product {...this.props.products[product]} />
+              <Product
+                id={product}
+                product={this.props.products[product]}
+                onItemClick={this.props.onItemClick}
+              />
             </li>
           ))}
         </ul>
