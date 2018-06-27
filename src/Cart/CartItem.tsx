@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { IProduct } from "./Product";
+import { IProduct } from "../Shop/Product";
 
 export interface ICartProps {
   id: string;
@@ -19,8 +19,8 @@ class Cart extends React.Component<ICartProps> {
 
   public render() {
     return (
-      <div className="CartItem">
-        <div className="desc left">
+      <div className="cart_item">
+        <div className="desc_left">
           <img
             className="cart_img"
             src={"images/" + this.props.product.image}
@@ -28,21 +28,22 @@ class Cart extends React.Component<ICartProps> {
             height="150"
           />
         </div>
-        <div className="desc right">
+        <div className="desc_middle">
           <div className="clear" />
           <p className="desc"> {this.props.product.titel}</p>
           <div className="clear" />
-          <p className="desc">In Stock:</p>
+          <p className="desc">In Stock:&nbsp;</p>
           <p className="desc"> {this.props.product.count}</p>
           <div className="clear" />
-
+        </div>
+        <div className="desc_right">
           <div className="clear" />
-          <p className="attribute">
-            {this.props.amount * this.props.product.price}
+          <p className="attribute accent-color">
+            {this.props.amount * this.props.product.price}€
           </p>
-          <p className="attribute">=</p>
-          <p className="attribute"> {this.props.product.price}</p>
-          <p className="attribute"> * </p>
+          <p className="attribute">&nbsp; = &nbsp;</p>
+          <p className="attribute"> {this.props.product.price}€</p>
+          <p className="attribute">&nbsp; * &nbsp;</p>
           <input
             className="attribute"
             type="number"

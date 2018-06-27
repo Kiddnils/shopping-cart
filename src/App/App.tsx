@@ -1,10 +1,10 @@
 import * as React from "react";
 import "./App.css";
 
-import Cart from "./Cart";
-import Header from "./Header";
-import { IProduct } from "./Product";
-import Shop from "./Shop";
+import Cart from "../Cart/Cart";
+import Header from "../Header/Header";
+import { IProduct } from "../Shop/Product";
+import Shop from "../Shop/Shop";
 
 export interface IApp {
   items: string;
@@ -33,25 +33,39 @@ class App extends React.Component<{}, IAppState> {
       cart: {},
       products: {
         "1": {
-          count: 2,
+          count: 5,
           description: "Made by Nokia",
           image: "nokia6.1.jpg",
-          price: 200,
+          price: 249,
           titel: "Nokia 6.1"
         },
         "2": {
-          count: 3,
+          count: 8,
           description: "Made by Nokia",
           image: "nokia7.1.jpg",
-          price: 400,
+          price: 364,
           titel: "Nokia 7.1"
         },
         "3": {
           count: 20,
           description: "Made by Nokia",
           image: "nokia8.jpg",
-          price: 800,
+          price: 689,
           titel: "Nokia 8"
+        },
+        "4": {
+          count: 9,
+          description: "Made by Essential",
+          image: "essentialphone.jpg",
+          price: 579,
+          titel: "Essential Phone"
+        },
+        "5": {
+          count: 200,
+          description: "Made by OnePlus",
+          image: "oneplus6.jpg",
+          price: 569,
+          titel: "One Plus 6"
         }
       }
     };

@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Open Sans;
 }
 
 .logo {
@@ -24,14 +25,17 @@
 }
 
 .navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   padding-left: 15%;
+  height: 80px;
 }
 
 .navigation div {
-  float: left;
-  overflow: hidden;
+  cursor: pointer;
 }
 
 .navigation-img {
@@ -43,6 +47,7 @@
 }
 .desc {
   float: left;
+  font-weight: bold;
 }
 
 .attribute {
@@ -51,4 +56,20 @@
 
 .clear {
   clear: both;
+}
+
+.cart-count {
+  float: right;
+  margin-top: 10px;
+  border-radius: 500px;
+  background-color: #febd69;
+  border: 2px solid #febd69;
+}
+
+input[type="number"] {
+  background-color: rgb(249, 249, 249);
+  border: 1.5px solid #ddd;
+  width: 75px;
+  box-sizing: border-box;
+  font-size: 100%;
 }

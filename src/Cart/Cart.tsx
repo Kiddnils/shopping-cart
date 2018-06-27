@@ -1,8 +1,8 @@
 import * as React from "react";
 import "./Cart.css";
 
+import { IProduct } from "../Shop/Product";
 import CartItem from "./CartItem";
-import { IProduct } from "./Product";
 
 export interface ICartProps {
   cart: {
@@ -34,8 +34,13 @@ class Cart extends React.Component<ICartProps> {
     return (
       <div className="Cart">
         <ul className="cart-list">
+          {Object.keys(this.props.cart).length === 0 ? (
+            <li key="empty" className="cart-list-item">
+              <p>No item in cart.</p>
+            </li>
+          ) : null}
           {Object.keys(this.props.cart).map(cart => (
-            <li key={cart} className="cart_item">
+            <li key={cart} className="cart-list-item">
               <CartItem
                 id={cart}
                 amount={this.props.cart[cart].count}
@@ -45,8 +50,8 @@ class Cart extends React.Component<ICartProps> {
             </li>
           ))}
         </ul>
-        <div className="cart_item attribute">
-          <p>Total: {this.getTotal()}</p>
+        <div className="cart-list-item attribute accent-color">
+          <p>Total: {this.getTotal()}€</p>
         </div>
       </div>
     );

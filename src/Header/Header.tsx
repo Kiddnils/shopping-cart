@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./Header.css";
 
 export interface IHeaderProps {
   cartCount: number;
@@ -10,9 +9,9 @@ export interface IHeaderProps {
 class Header extends React.Component<IHeaderProps> {
   public render() {
     return (
-      <div className="Header">
+      <div className="header">
         <div className="logo">
-          <p>smartphone-picker 2.0</p>
+          <p>shopping-cart with React.js and Typescript</p>
         </div>
         <div className="navigation">
           <div>
@@ -32,7 +31,11 @@ class Header extends React.Component<IHeaderProps> {
               height="80"
               onClick={this.props.switchStateToCart}
             />
-            <p>{this.props.cartCount}</p>
+            <div className="cart-count">
+              <p onClick={this.props.switchStateToCart}>
+                &nbsp;{this.props.cartCount}&nbsp;
+              </p>
+            </div>
           </div>
         </div>
       </div>

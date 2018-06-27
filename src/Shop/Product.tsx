@@ -36,27 +36,31 @@ export class Product extends React.Component<IProductProps, IProductState> {
       <div className="Product">
         <img src={"images/" + this.props.product.image} alt="" height="450" />
         <div>
-          <p className="desc">Titel:</p>
+          <p className="desc">Titel:&nbsp;</p>
           <p className="attribute"> {this.props.product.titel}</p>
           <div className="clear" />
-          <p className="desc">Description:</p>
+          <p className="desc">Description:&nbsp;</p>
           <p className="attribute"> {this.props.product.description}</p>
           <div className="clear" />
-          <p className="desc">In Stock:</p>
+          <p className="desc">In Stock:&nbsp;</p>
           <p className="attribute"> {this.props.product.count}</p>
           <div className="clear" />
-          <p className="desc">Price:</p>
-          <p className="attribute"> {this.props.product.price}</p>
+          <p className="desc">Price:&nbsp;</p>
+          <p className="attribute"> {this.props.product.price}€</p>
           <div className="clear" />
           <br />
+          <p className="desc">Amount:</p>
           <input
+            className="attribute"
             type="number"
             min="1"
             id="new-todo"
             onChange={this.handleChange}
             value={this.state.amount}
           />
-          <button className="square" onClick={this.onClickLocal}>
+          <div className="clear" />
+          <br />
+          <button className="cart-button attribute" onClick={this.onClickLocal}>
             Add to cart
           </button>
         </div>

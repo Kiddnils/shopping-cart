@@ -15,3 +15,14 @@
   padding: 25px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+
+.cart-button {
+  cursor: pointer;
+  border: 0;
+  padding: 2px;
+  background-color: #febd69;
+  width: 75px;
+}
+.cart-button:hover {
+  background-color: #f5d78e;
+}

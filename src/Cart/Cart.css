@@ -1,0 +1,33 @@
+.cart-list {
+  margin-top: 80px;
+}
+
+.cart-list-item {
+  overflow: hidden;
+  margin: 15px;
+  list-style: none;
+  padding: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #ddd;
+}
+
+.cart_item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.desc_left {
+  width: 100px;
+}
+
+.desc_middle {
+  flex-grow: 1;
+  font-size: 24px;
+}
+
+.accent-color {
+  color: #b12704;
+  font-weight: bold;
+}
